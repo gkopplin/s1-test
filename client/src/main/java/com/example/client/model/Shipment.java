@@ -1,15 +1,10 @@
-package com.example.shipment.model;
+package com.example.client.model;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "shipments")
 public class Shipment {
-    @Column
+
     private String name;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long trackingNumber;
     private Long id;
 
     public Long getId() {
@@ -19,9 +14,6 @@ public class Shipment {
     public void setId(Long id) {
         this.id = id;
     }
-
-    @Column
-    private long trackingNumber;
 
     public Shipment() {};
 

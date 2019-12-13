@@ -12,7 +12,7 @@ public class ShipmentServiceImpl implements ShipmentService {
 
     @Override
     public Shipment getShipment(long trackingNumber) {
-        return shipmentRepository.findById(trackingNumber).orElse(null);
+        return shipmentRepository.findByTrackingNumber(trackingNumber);
     }
 
     @Override
